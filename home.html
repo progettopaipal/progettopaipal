@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv='Content-Type' content='text/html;charset=utf-8'></meta>
+<title>Home di paypal</title>
+<link href = "http://localhost:5000/stile"  rel="stylesheet"  type = "text/css">
+<script src = "Core.js"></script>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div id = "conteiner">
+<div id = "pagina">
+<div id = "testa">
+         <svg id  = "linea" height = "0.625em" width = "100%">
+         <line x1="0" y1="0.300em" x2="100%" y2="0.300em" style="stroke:blue;stroke-width:2" />
+	   	</svg>
+		 <div id = "pezzo" >
+		 <button class = "altsx" onclick="mostramenu()">Menu</button>
+		 <a href = "http://localhost:5000/home.html">
+		 <svg id = "logo" height = "9.375em" width = "9.375em">
+		 <text x="0" y="3.5em" font-size = "2.5em" fill="blue">Paypal</text>
+		 </svg>
+         </a>
+</div>
+</div>
+<div id = "contenuto">
+ <svg  height = "3.125em" width = "auto">
+		 <text x="0" y="1.0em" font-size = "2.5em" fill="blue">Home del sito</text>
+		 </svg>
+<h3>Informazioni</h3>
+ <p>Sul nostro sito puoi effettuare le seguenti operazioni:
+ -Versamento di somme di senaro
+ -Agganciare una carta di credito
+ -Pagare attivita commerciali
+ -Inviare denaro
+ -Ricevere Denaro
+ -Visualizzare il proprio profilo
+ -Gestire  le richieste di denaro
+ -Ricevere comunicazioni sul canale preferito scelto
+ </p>
+ <h3>Informazioni sul canale di comunicazione</h3>
+ <p>In fase di registrazione vi verra chiesto di scegliere il vostro vale di comunicazione preferito tra:
+ -Email
+ -Telegram
+ Tutte le comunicazioni verranno inoltrate in automatico nel canale scelto
+ Nel caso in cui si sia scleto Telegram è necessario attivare tale canale di comunicazione aprendo l'app
+ e scrivendo "paipal" nella barra di ricerca,aprite la chat che vi compare e scrivete login:tuaemail,tuapassword
+ Da quel momento riceverete tutte le comunicazioni in quella chat. 
+ </p>
+</div>
+<script src = "http://localhost:5000/Login"  type = "text/javascript"></script>
+<script src = "http://localhost:5000/Registrazione"  type = "text/javascript"></script>
+</div>
+<div id = "menu">
+<button class = "botmenu" onclick = "location.href='http://localhost:5000/home.html'" id = "tastohome">Home</button><br></br>
+<button class = "botmenu" onclick = "mostrasottomenu()" id = "gestprofilo">Gestisci Profilo</button>
+
+<div id = "sgestprofilo" style ="visibility : hidden;">
+<a href = "javascript:login()">Login</a><br>
+<a href = "javascript:registrazione()">Registrazione</a>
+</div>
+<script  type = "text/javascript">
+function mostrasottomenu() {
+	var bot = document.getElementById("sgestprofilo");
+	var vis = bot.getAttribute("style");
+	if (!(vis  == "visibility : visible;")) {
+		   bot.setAttribute("style","visibility : visible;");
+		}else {
+			bot.setAttribute("style","visibility : hidden;");
+		}
+	
+}
+</script>
+<script  type = "text/javascript">
+function mostramenu() {
+	var menu = document.getElementById("menu");
+	var cont = menu.getAttribute("style");
+	if (!(cont  == "visibility : visible;")) {
+	menu.setAttribute("style","visibility : visible;");
+	var pagina = document.getElementById("pagina");
+	pagina.setAttribute("style","width : 55%;");
+	}else {
+		var bot = document.getElementById("sgestprofilo");
+		var vis = bot.getAttribute("style");
+		if ((vis  == "visibility : visible;")) {
+			   bot.setAttribute("style","visibility : hidden;");
+			}
+		menu.setAttribute("style","visibility : hidden;");
+		var pagina = document.getElementById("pagina");
+		pagina.setAttribute("style","width : 100%;");
+	}
+}
+
+</script>
+</div>
+</div>
+</body>
+</html>
