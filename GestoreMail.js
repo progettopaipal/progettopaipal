@@ -8,13 +8,13 @@ var MailModulo = {
             
   var Sendgrid = require("sendgrid-web");
       var sendgrid = new Sendgrid({
-        user: "azure_2433ae7e5ad8b6d98669ea11454aab02@azure.com",//provide the login credentials
-        key:"Amolafiga97"
+        user: "",//provide the login credentials
+        key:""
       });
 
     sendgrid.send({
     to: mail,
-    from: 'pierobelmonte97@outlook.it',
+    from: '',
     subject: 'messaggio da paipal',
     html: testo
   }, function (err) {
