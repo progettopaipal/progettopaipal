@@ -1,14 +1,13 @@
+<h1>English</h1>
 # progettopaipal
 ## Set up the project
-- Scaricare ed estrarre lo zip </br>
-- Crea un account  gratuito sendgrid nel sito ufficiale ( per poter usare la funzionalità invio mail)</br>
-- Inserisci le credenziali nell'apposito file GestoreMail.js</br>
-- Eseguire il file Database.sql con mysql</br>
-- Recarsi nella all'interno della cartella</br>
-- Dare il comando 'sudo node server.js'</br>
-- Collegarsi a localhost:5000/home.html</br>
-## Strumenti e tecnologie usate
+- Download and extract zip</br>
+- Insert user and pass of a gmail account  in the file  GestoreMail.js</br>
+- Run  the  file Database.sql via mysql</br>
+- Move to the directory with terminal window</br>
+- Run command 'sudo node server.js'</br>
+- Browse to localhost:5000/home.html</br>
+## Used Technologies
 - html , css , javascript
 - nodejs
 - Eclipse web 
-
